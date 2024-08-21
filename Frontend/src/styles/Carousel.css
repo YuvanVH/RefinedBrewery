@@ -2,11 +2,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 0 200px;
 }
 
 .carousel {
   overflow: hidden;
-  width: 900px;
+  width: 100%;
+  /* Gör karusellen fullbredd */
 }
 
 .carousel-inner {
@@ -15,7 +17,8 @@
 }
 
 .carousel-item {
-  min-width: 300px;
+  flex: 0 0 calc(100% / 3);
+  /* Tre items per sida */
   box-sizing: border-box;
   padding: 10px;
   text-align: center;
@@ -27,7 +30,6 @@
   border-radius: 50%;
   object-fit: cover;
   border: 4px solid #d7d7d70c;
-
 }
 
 .carousel-image:hover {
@@ -37,4 +39,26 @@
 .carousel-title {
   font-size: 16px;
   font-weight: bold;
+}
+
+/* Anpassa antal items per sida beroende på skärmstorlek */
+@media (max-width: 900px) {
+  .carousel-item {
+    flex: 0 0 calc(100% / 2);
+    /* Två items per sida på mindre skärmar */
+  }
+
+  .carousel-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .carousel-item {
+    flex: 0 0 calc(100% / 1);
+    /* Ett item per sida på mobiler */
+  }
 }
