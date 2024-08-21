@@ -49,3 +49,9 @@
   font-weight: 400;
   font-style: normal;
 }
+
+@media (max-width: 705px) {
+  .text {
+    font-size: 40px;
+  }
+}
