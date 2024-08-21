@@ -1,0 +1,43 @@
+/* Frontend/src/styles/Footer.css */
+
+.footer {
+  background-color: #383d37;
+  padding: 50px 0;
+  text-align: center;
+  border-top: 1px solid #ffffff;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  --mask:
+    radial-gradient(25.77px at 50% 34.8px, #000 99%, #0000 101%) calc(50% - 24px) 0/48px 100%,
+    radial-gradient(25.77px at 50% -22.8px, #0000 99%, #000 101%) 50% 12px/48px 100% repeat-x;
+  -webkit-mask: var(--mask);
+  mask: var(--mask);
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer p {
+  margin: 0;
+  color: #ffffff;
+  font-size: 14px;
+}
+
+.footer-nav {
+  margin-top: 10px;
+}
+
+.footer-nav a {
+  margin: 0 10px;
+  color: #895747;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-nav a:hover {
+  text-decoration: underline;
+}

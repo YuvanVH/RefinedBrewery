@@ -1,0 +1,51 @@
+.intro-film {
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  /* border-radius: 100px 100px 0px 0px; */
+  border: 5px solid #cccccc14;
+  overflow: hidden;
+}
+
+.video-container video {
+  display: block;
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  /* Beskär videon för att fylla hela utrymmet */
+  object-position: center;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: 6s ease;
+  background-color: rgba(0, 0, 0, 0.249);
+}
+
+.video-container:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  font-size: 80px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* google fontstill */
+  font-family: "Abril Fatface", serif;
+  font-weight: 400;
+  font-style: normal;
+}

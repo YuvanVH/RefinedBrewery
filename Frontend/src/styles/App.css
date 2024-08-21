@@ -1,0 +1,45 @@
+/* Frontend/src/styles/App.css */
+:root {
+  font-family: "Abril Fatface", Inter, system-ui, Avenir, Helvetica, Arial,
+    sans-serif;
+  text-align: center;
+}
+
+.app-container {
+  min-height: 100vh;
+  position: relative;
+  padding-bottom: 200px;
+}
+
+h1 {
+  font-size: 3.0em;
+  line-height: 1.1;
+  color: white;
+}
+
+h2 {
+  margin-top: 40px;
+  color: white;
+}
+
+a {
+  font-weight: 500;
+  color: #ffffff;
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: #995941;
+  transition: 0.5s ease;
+}
+
+p,
+label {
+  color: white;
+}
+
+body {
+  margin: 0;
+  height: 0;
+  background-color: rgb(47, 40, 36);
+}

@@ -1,0 +1,104 @@
+/* Frontend/src/styles/FormStyles.css */
+.form-container {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.form-container h2 {
+  color: rgb(235, 248, 241);
+}
+
+.form-container form {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.form-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0);
+  opacity: 0.2;
+  background-image: linear-gradient(135deg, #313d36 25%, transparent 25%), linear-gradient(225deg, #313d36 25%, transparent 25%), linear-gradient(45deg, #313d36 25%, transparent 25%), linear-gradient(315deg, #313d36 25%, #fefefe00 25%);
+  background-position:
+    40px 0,
+    40px 0,
+    0 0,
+    0 0;
+  background-size: 40px 40px;
+  background-repeat: repeat;
+  border-radius: 10px;
+  z-index: -1;
+}
+
+.form-container label {
+  margin-bottom: 10px;
+}
+
+.form-container input[type="text"],
+.form-container input[type="password"] {
+  max-width: auto;
+  border: 2px solid #aeaeae8d;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
+  width: 80%;
+}
+
+.error-message {
+  color: rgb(228, 58, 58);
+  margin-top: 5px;
+  font-weight: 800;
+}
+
+.form-container button[type="submit"] {
+  background-color: #44444481;
+  color: white;
+  padding: 10px 30px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-weight: 700;
+  margin-top: 10px;
+  border-radius: 25px;
+}
+
+.form-container button[type="submit"]:hover {
+  background-color: #49391f;
+  font-weight: 800;
+}
+
+.form-container button,
+.profile-container button {
+  background-color: #44444481;
+  color: white;
+  padding: 10px 30px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-weight: 700;
+  margin-top: 10px;
+  border-radius: 25px;
+}
+
+.form-container button:hover,
+.profile-container button:hover {
+  background-color: #491f1f;
+  font-weight: 800;
+}
+
+@media (max-width: 485px) {
+
+  .form-container form>input[type="text"],
+  .form-container form>input[type="password"] {
+    width: 80%;
+    height: 40px;
+  }
+}

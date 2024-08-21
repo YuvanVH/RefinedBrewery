@@ -1,0 +1,238 @@
+/* Fullstack/Frontend/src/styles/Header.css */
+
+header {
+  background-color: #383d37;
+  padding-bottom: 10px;
+}
+
+.wave-border {
+  background-color: #383d37;
+  height: 30px;
+  --mask:
+    radial-gradient(25.77px at 50% calc(100% - 34.8px), #000 99%, #0000 101%) calc(50% - 24px) 0/48px 100%,
+    radial-gradient(25.77px at 50% calc(100% + 22.8px), #0000 99%, #000 101%) 50% calc(100% - 12px)/48px 100% repeat-x;
+  -webkit-mask: var(--mask);
+  mask: var(--mask);
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: space-evenly;
+  list-style-type: none;
+  margin-right: 200px;
+  margin-left: 200px;
+  margin-top: 0;
+}
+
+.nav-menu li {
+  padding: 0 20px;
+  font-size: larger;
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  background-color: #1f211df0;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  padding: 20px 0;
+  border-radius: 0 20px 20px 20px;
+  border: 2px solid #d7d7d734;
+  font-size: small;
+  font-weight: 100;
+  z-index: 100;
+}
+
+.nav-menu li:hover .submenu {
+  display: block;
+}
+
+.navbar .submenu li {
+  display: block;
+}
+
+.burger-menu {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.line1,
+.line2,
+.line3 {
+  width: 25px;
+  height: 3px;
+  background-color: #dbdbdb;
+  margin: 5px;
+  transition: all 0.3s ease;
+}
+
+.burger-menu.active .line1 {
+  transform: rotate(45deg) translate(5px, 4px);
+  width: 30px;
+}
+
+.burger-menu.active .line2 {
+  transform: rotate(-45deg) translate(5px, -4px);
+  width: 30px;
+}
+
+.burger-menu.active .line3 {
+  transform: rotate(0deg) translate(0px, 0px);
+  background-color: #ffffff00;
+}
+
+#nav-login-register-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0;
+  background-color: #1d241f39;
+}
+
+#nav-login-register-menu a,
+#nav-login-register-menu p {
+  margin: 0 10px;
+  font-size: 14px;
+  color: #ffffff9a;
+}
+
+#nav-login-register-menu a:hover,
+#nav-login-register-menu p:hover {
+  color: #ffffff;
+}
+
+@media screen and (max-width: 839px) {
+  .nav-menu {
+    display: flex;
+    justify-content: space-evenly;
+    list-style-type: none;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+
+  .nav-menu {
+    flex-direction: column;
+    align-items: flex-start;
+    width: calc(100% - 20px);
+    height: calc(100vh - 50px);
+    background-color: #5f564be9;
+    padding-bottom: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    transition: transform 1.4s ease-in-out;
+    transform: translateX(-110%);
+
+    --mask: radial-gradient(36.89px at calc(100% - 51px) 50%,
+        #000 99%,
+        #0000 101%) 0 calc(50% - 40px) / 100% 80px,
+      radial-gradient(36.89px at calc(100% + 31px) 50%, #0000 99%, #000 101%) calc(100% - 20px) 50%/100% 80px repeat-y;
+    -webkit-mask: var(--mask);
+    mask: var(--mask);
+  }
+
+  .nav-menu.active {
+    transform: translateX(0);
+    transition: transform 1s ease-in-out;
+    margin: 0;
+    padding-top: 50px;
+    padding-left: 20px;
+  }
+
+  .nav-menu.active li {
+    margin: 5px 0;
+  }
+
+  .submenu {
+    position: relative;
+    margin-top: 10px;
+    box-shadow: none;
+    font-weight: 80;
+    font-size: small;
+    border-radius: 0 20px 20px 20px;
+    border: 2px solid #cccccc14;
+  }
+
+  .burger-menu {
+    display: flex;
+    position: fixed;
+    top: 40px;
+    left: 20px;
+    z-index: 1001;
+  }
+
+  .nav-menu.active .line1,
+  .nav-menu.active .line2,
+  .nav-menu.active .line3 {
+    background-color: #212a23;
+  }
+
+  .desktop-only {
+    display: none;
+  }
+
+  .mobile-only {
+    display: block;
+  }
+
+  #nav-login-register-menu {
+    display: none;
+    /* Hide login/register menu on small screens */
+  }
+}
+
+#TeaLogoText {
+  position: absolute;
+  font-size: 55px;
+  width: auto;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  top: 35%;
+  /* Centrera vertikalt */
+  left: 50%;
+  /* Centrera horisontellt */
+  transform: translate(-50%, -50%);
+  /* Centrera absolut text relativt till förälderelement */
+  transition: color 1s ease;
+}
+
+#TeaLogoText:hover {
+  color: #995941;
+}
+
+#TeaLogo {
+  margin-top: 20px;
+  width: 10%;
+  height: 100%;
+  font-family: "Abril Fatface", serif;
+  font-weight: 300;
+  font-style: normal;
+  position: relative;
+  opacity: 0.7;
+}
+
+.logoTitle:hover {
+  margin-top: 20px;
+}
+
+/* Media queries för titel/logo */
+@media (max-width: 850px) {
+  #TeaLogoText {
+    top: 45%;
+    font-size: 34px;
+  }
+}
+
+@media (max-width: 420px) {
+  #TeaLogoText {
+    font-size: 20px;
+    top: 65%;
+  }
+}
+
+@media screen and (min-width: 840px) {
+  .mobile-only {
+    display: none;
+  }
+}

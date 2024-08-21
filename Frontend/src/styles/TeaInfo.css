@@ -1,0 +1,62 @@
+/* Frontend/src/styles/TeaInfo.css */
+h1 {
+  margin-bottom: 30px;
+}
+
+.tea-details {
+  font-family: Georgia, Inter, system-ui, Avenir, Helvetica, Arial;
+  font-size: medium;
+}
+
+/* Mellanrum mellan textavsnitten */
+.tea-details p {
+  margin-bottom: 28px;
+}
+
+.tea-image-info {
+  width: 40%;
+  height: 540px;
+  object-fit: cover;
+  border-radius: 150px 150px 0px 0px;
+}
+
+.small-info-container {
+  display: grid;
+  align-items: center;
+  border-style: dotted;
+  border-width: thick;
+  border-color: white;
+  border-radius: 15px 15px 15px 15px;
+  width: 25%;
+  padding: 20px;
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 40px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 840px) {
+  .tea-details {
+    font-family: Georgia, Inter, system-ui, Avenir, Helvetica, Arial;
+    font-size: 15px;
+    padding: 0 20px;
+  }
+
+  .tea-details p {
+    margin-bottom: 25px;
+  }
+
+  .tea-image-info {
+    width: 50%;
+    height: 60%;
+  }
+
+  .small-info-container {
+    border-radius: 15px 15px 15px 15px;
+    width: 50%;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 50px;
+  }
+}
