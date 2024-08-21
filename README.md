@@ -1,4 +1,4 @@
-Laboration 3: Projekt, VT-2024
+Laboration 3: Te-webbsida, VT-2024
 Slutförandvillkor
 Senaste inlämningsdatum: söndag, 2 juni 2024, 23:59
 
