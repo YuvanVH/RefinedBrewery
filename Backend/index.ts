@@ -4,9 +4,14 @@ import express, { Request, Response } from 'express';
 import { Client } from 'pg';
 import dotenv from 'dotenv';
 import bcrypt from 'bcrypt';
+import path from 'path';
 
 dotenv.config();
 const app = express();
+
+// Serva frontend statiska filer
+app.use(express.static(path.join(__dirname, '../Frontend/dist')));
+
 app.use(cors());
 // Middleware för att tolka JSON-body i förfrågningar
 app.use(express.json());
