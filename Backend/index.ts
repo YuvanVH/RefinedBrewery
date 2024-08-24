@@ -12,10 +12,6 @@ const app = express();
 // Serva frontend statiska filer
 app.use(express.static(path.join(__dirname, '../Frontend/dist')));
 
-app.get('*', (req: Request, res: Response) => {
-  res.sendFile(path.join(__dirname, '../Frontend/dist/index.html'));
-});
-
 app.use(cors());
 // Middleware för att tolka JSON-body i förfrågningar
 app.use(express.json());
