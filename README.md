@@ -17,3 +17,4 @@ För G ska följande krav uppfyllas:
 - Omfattningen på inlämningen måste vara tillräckligt stor. Insatsen kommer att bedömas utifrån att projektet pågår i ungefär fyra veckor.
 - Projektet ska redovisas. Redovisningarna sker endast på plats på kursens två sista schemalagda dagar (28/5 och 30/5).
 - Redovisningen ska visa upp projektet (vad projektet löser för problem samt hur det fungerar och ser ut), frontend-kod, backend-kod och databasstruktur. Redovisningen ska vara runt tio minuter. Redovisningar under åtta minuter underkänns. Redovisningar får inte överskrida tolv minuter.
+# RefinedBrewery
